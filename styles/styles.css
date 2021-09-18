@@ -84,9 +84,6 @@ html {
 
 .logo {
     cursor: pointer;
-    /* Combine with flex-end will set image on the left */
-    /* margin-right: auto; */
-    /* Shift logo to the left */
     position: fixed;
     left: 5rem;
     top: 3.5rem;
@@ -96,15 +93,20 @@ html {
     width: 100%;
     margin-top: 0.5rem;
     /* Bring li content closer to logo */
-    /* margin-left: -2rem; */
+    margin-left: -1rem;
 }
 
 .nav ul {
     display: flex;
+    /* justify-content: space-between; */
     /* Prevent wrapping of sign up button */
     white-space: nowrap;
     list-style-type: none;
     color: black;
+}
+
+.login {
+    display: flex;
 }
 
 

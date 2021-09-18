@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- Font awesome to use selected icons if neccessary -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="Script/test.js" defer></script>
+    <script src="Script/menu.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <title>blogr-landing-page</title>
+</head>
+
+<body>
+    <header class="header">
+        <!-- Navbar Start -->
+        <div class="logo">
+            <img class="logo" src="images/logo.svg">
+        </div>
+        <div class="nav">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a class="fancy-link dropbtn" onclick="myFunction(); arrow()" href="#">Product
+
+                    <img class="dropbtn" id="change" src="images/icon-arrow-light.svg">
+                </a>
+                    <div class="dropdown-content" id="myDropdown">
+                        <a href="#">Overview</a>
+                        <a href="#">Pricing</a>
+                        <a href="#">Marketplace</a>
+                        <a href="#">Features</a>
+                        <a href="#">Integrations</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="fancy-link" onclick="arrow()" href="#">Company
+                  <img class="arrow-down" src="images/icon-arrow-light.svg">
+                  </a>
+                </li>
+                <li class="nav-item"><a class="fancy-link" href="#">Connect
+                  <img class="arrow-down" src="images/icon-arrow-light.svg">
+                  </a>
+                </li>
+                <span class="space"></span>
+                <li class="nav-item">
+                    <a href="#">Login</a>
+                </li>
+                <a class="nav-item" href="#">
+                    <button>Sign Up</button>
+                </a>
+            </ul>
+        </div>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <!-- Navbar End -->
+        <!-- Sub heading content -->
+    </header>
+</body>
+
+</html>

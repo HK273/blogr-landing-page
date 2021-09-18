@@ -1,0 +1,338 @@
+/* ===============================================================================
+Styles for Blogging page:
+
+https://css-tricks.com/scale-svg/
+https://www.youtube.com/watch?v=ciMsVVyv3Og
+https://coryrylan.com/blog/css-gap-space-with-flexbox - Spacing flex
+https://stackoverflow.com/questions/43475815/how-do-i-create-a-space-between-my-nav-bar - Spacing between nav items
+Centre Things: https://www.w3.org/Style/Examples/007/center.en.html#vertical
+Prevent wrapping: https://presscustomizr.com/snippet/avoid-wrapping-menu-items/
+
+Animation on links: https://www.youtube.com/watch?v=ceNMP-aQkQ4
+Positioning: https://www.youtube.com/watch?v=UO8ed-JB4So
+=================================================================================== */
+
+
+/* Import styles */
+
+
+/* Overpass */
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap');
+
+/* Ubuntu */
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+/* Custom Properties  */
+
+:root {
+    /* Primary */
+    --light-red: hsl(356, 100%, 66%);
+    --v-light-red-h-background: hsl(355, 100%, 74%);
+    --very-dark-blue: hsl(208, 49%, 24%);
+    /* Neatral */
+    --white-text: hsl(0, 0%, 100%);
+    --grayish-blue: hsl(240, 2%, 79%);
+    --very-dark-gray-blue: hsl(207, 13%, 34%);
+    --very-dark-black-blue: hsl(240, 10%, 16%);
+    /* Gradient */
+    /* Background gradient - Intro/CTA mobile nav: */
+    --gradient-v-light-red: hsl(13, 100%, 72%);
+    --gradient-light-red: hsl(353, 100%, 62%);
+    /* Background gradient - body: */
+    --gradient-v-dark-blue: hsl(237, 17%, 21%);
+    --gradient-desaturated-blue: hsl(237, 23%, 32%);
+}
+
+
+/* Resets */
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Navigation menu */
+
+.header {
+    padding: 20rem;
+    width: 100%;
+    list-style: none;
+    border-bottom-left-radius: 10rem;
+    /* svg as background img + linear gradient */
+    background: url(/images/bg-pattern-intro.svg) 24% 52%, linear-gradient(to right, var(--gradient-v-light-red), var(--gradient-light-red));
+    /* set svg background size */
+    background-size: 175rem;
+    display: flex;
+    align-items: center;
+    margin-top: -16rem;
+    overflow: hidden;
+}
+
+.logo {
+    cursor: pointer;
+    /* Combine with flex-end will set image on the left */
+    /* margin-right: auto; */
+    /* Shift logo to the left */
+    position: fixed;
+    left: 5rem;
+    top: 3.5rem;
+}
+
+.nav {
+    width: 100%;
+    margin-top: 0.5rem;
+    /* Bring li content closer to logo */
+    /* margin-left: -2rem; */
+}
+
+.nav ul {
+    display: flex;
+    /* Prevent wrapping of sign up button */
+    white-space: nowrap;
+    list-style-type: none;
+    color: black;
+}
+
+
+/* Spacing between login / signup */
+
+.space {
+    margin-right: auto;
+}
+
+li {
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+}
+
+
+/* Raise affect nav items when hovered over */
+
+li:hover {
+    transform: translateY(-0.1rem) scale(1.1);
+}
+
+a {
+    font-family: 'Ubuntu';
+    text-decoration: none;
+    /* Space between links */
+    margin: 0 1.9rem;
+    color: var(--white-text);
+    font-size: 1.8rem;
+    transition: all 0.3s ease 0s;
+}
+
+
+/* Underline effect on links */
+
+.fancy-link {
+    position: relative;
+}
+
+.fancy-link::after {
+    content: '';
+    position: absolute;
+    /* position underline on bottom of link */
+    left: 0;
+    bottom: 0;
+    width: 80%;
+    height: 0.15rem;
+    background-color: var(--white-text);
+    /* Animation */
+    transform: scaleX(0);
+    /* transition from left to right */
+    transition: transform 300ms ease-in;
+    /* underline end on right */
+    transform-origin: right;
+}
+
+.fancy-link:hover:after {
+    transform: scaleX(1);
+    /* underline start on left */
+    transform-origin: left;
+}
+
+
+/* Button styles */
+
+button {
+    padding: 0.7rem 1.7rem;
+    margin-left: -1rem;
+    background-color: var(--white-text);
+    border: none;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    color: #FC5F64;
+    font-size: 1.8rem;
+    font-family: 'Ubuntu';
+    margin-top: -0.5rem;
+}
+
+
+/* on hover over button zoom */
+
+button:hover {
+    background-color: #FC5761;
+    color: var(--white-text);
+    transform: translateY(-0.2rem) scale(1.1);
+    /* colour text on transition */
+    color: white;
+}
+
+
+/* Arrow  */
+
+.arrow {
+    transform: rotate(180deg);
+}
+
+
+/* Dropdown menu for links */
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown-content {
+    display: none;
+    margin-top: 2rem;
+    border-radius: 0.3rem;
+    /* Position needs to change on hamburger menu */
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 16rem;
+    padding: 1rem 0;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    font-size: 1.5rem;
+    font-family: 'Ubuntu';
+    color: var(--gradient-desaturated-blue);
+    /* padding: 12px 16px; */
+    /* Space links in dropdown */
+    margin: 1.5rem 2rem;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    color: var(--very-dark-black-blue);
+    font-weight: 600;
+}
+
+.show {
+    display: block;
+}
+
+
+/* Hamburger styles */
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 4rem;
+    height: 0.3rem;
+    margin: 0.6rem auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+
+/* Responsive */
+
+@media only screen and (max-width: 1050px) {
+    .nav-menu {
+        position: fixed;
+        padding: 3rem;
+        right: -100%;
+        flex-direction: column;
+        background-color: #fff;
+        width: 35rem;
+        border-radius: 1rem;
+        text-align: center;
+        align-items: center;
+        /* This creates a slide in affect */
+        /* transition: 0.5s; */
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+    .nav-menu.active {
+        /* Centre collapsable menu */
+        position: absolute;
+        top: 36%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+        /* top: 0; */
+    }
+    .nav-item {
+        margin: 1.5rem 0;
+    }
+    /* line */
+    .space {
+        margin: 1rem 0;
+        border: 0.1rem solid var(--grayish-blue);
+        border-radius: 0.1rem;
+        width: 100%;
+        margin-left: 0;
+    }
+    /* Dropdown menu */
+    .dropdown-content {
+        margin-top: 2rem;
+        border-radius: 0.3rem;
+        /* Position needs to change on hamburger menu */
+        position: relative;
+        background-color: #f9f9f9;
+        box-shadow: none !important;
+        min-width: 16rem;
+        padding: 1rem 0;
+        z-index: 1;
+    }
+    a {
+        color: var(--gradient-desaturated-blue);
+        font-weight: 500;
+        font-size: 2rem;
+    }
+    .fancy-link::after {
+        background-color: var(--very-dark-black-blue);
+    }
+    .hamburger {
+        position: relative;
+        display: block;
+        margin-left: 15rem;
+        cursor: pointer;
+    }
+    /* Hamburger transition */
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(0.9rem) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-0.9rem) rotate(-45deg);
+    }
+}

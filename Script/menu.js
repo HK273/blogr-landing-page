@@ -15,10 +15,6 @@ function mobileMenu() {
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 
-// function myFunction() {
-//     document.getElementById("myDropdown").classList.toggle("show");
-
-// }
 
 // Change arrow on click --> there is a bug with this in that clicking the dropdown menu items also affects the arrow - not good!
 

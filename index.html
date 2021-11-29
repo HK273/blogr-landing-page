@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -7,38 +6,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
-    <!-- Font awesome to use selected icons if neccessary -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="Script/test.js" defer></script>
+    <!-- <link rel="stylesheet" href="CSS/test.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <!-- <script src="JS/menu.js" defer></script> -->
     <script src="Script/menu.js" defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <title>blogr-landing-page</title>
 </head>
 
 <body>
     <header class="header">
-        <!-- Navbar Start -->
-        <nav>
-            <ul>
-                <li class="nav-item">
-                    <img class="logo" src="images/logo.svg">
+        <nav class="menu navbar">
+            <li><img class="logo_one" src="images/logo.svg"></li>
+            <ul class="nav-menu">
+                <li><img class="logo" src="images/logo.svg"></li>
+                <li class="item has-submenu">
+                    <a class="main-item" tabindex="0">Product<i class="fas fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li class="subitem"><a href="#">Overview</a></li>
+                        <li class="subitem"><a href="#">Pricing</a></li>
+                        <li class="subitem"><a href="#">Marketplace</a></li>
+                        <li class="subitem"><a href="#">Intergrations</a></li>
+                    </ul>
                 </li>
-                <li class="nav-item">Product</li>
-                <li class="nav-item">Company</li>
-                <li class="nav-item">Connect</li>
-                <li class="nav-item">Login</li>
-                <li class="nav-item">Sign Up</li>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
+                <li class="item has-submenu">
+                    <a class="main-item" tabindex="0">Company<i class="fas fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li class="subitem"><a href="#">About</a></li>
+                        <li class="subitem"><a href="#">Team</a></li>
+                        <li class="subitem"><a href="#">Blog</a></li>
+                        <li class="subitem"><a href="#">Careers</a></li>
+                    </ul>
+                </li>
+                <li class="item has-submenu">
+                    <a class="main-item" tabindex="0">Connect<i class="fas fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li class="subitem"><a href="#">Contact</a></li>
+                        <li class="subitem"><a href="#">Newsletter</a></li>
+                        <li class="subitem"><a href="#">LinkedIn</a></li>
+                    </ul>
+                </li>
+                <span class="space"></span>
+                <!-- Line seperator -->
+                <li class="main-item nav-item">Login</li>
+                <li class="nav-item"><button class="btn">Sign Up</button>
+                </li>
             </ul>
-
+            <li class="toggle"></li>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
-        <!-- Navbar End -->
-        <!-- heading content -->
+        <div class="sub-header">
+            <h1 class="main-h">A modern publishing platform
+            </h1>
+            <p class="main-p">Grow your audience and build your online brand
+            </p>
+            <div class="flex-parent">
+                <button class="flex-child">Start for Free</button>
+                <button class="flex-child">Learn More</button>
+            </div>
+        </div>
     </header>
+    <!-- Two column grid -->
+    <main>
+        <h1 class="sub-h">Designed for the future</h1>
+        <div class="wrapper">
+            <div class="col-one">
+                <h2>Introducing an extensible editor</h2>
+                <p class="sub-p">
+                    Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, videos, and Markdown. Extensibility with plugins
+                    and themes provide easy ways to add functionality or change the looks of a blog.
+                </p>
+                <h2>Robust content management</h2>
+                <p class="sub-p">
+                    Flexible content management enables users to easily move through posts. Increase the usability of your blog by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+                </p>
+            </div>
+            <div class="col-two">
+                <img class="svg-img" src="images/illustration-editor-desktop.svg">
+                <!-- <div class="feature-img"></div> -->
+            </div>
+        </div>
+        <div class="infra">
+
+        </div>
+    </main>
+
 </body>
 
 </html>

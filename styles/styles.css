@@ -1,5 +1,4 @@
-/* ===============================================================================
-Styles for Blogging page:
+/* Info
 
 https://css-tricks.com/scale-svg/
 https://www.youtube.com/watch?v=ciMsVVyv3Og
@@ -11,7 +10,8 @@ Prevent wrapping: https://presscustomizr.com/snippet/avoid-wrapping-menu-items/
 Animation on links: https://www.youtube.com/watch?v=ceNMP-aQkQ4
 Positioning: https://www.youtube.com/watch?v=UO8ed-JB4So
 underline links: https://a11y-101.com/development/underlined-links
-=================================================================================== */
+
+*/
 
 
 /* Import styles */
@@ -55,6 +55,9 @@ html {
     margin: 0;
     padding: 0;
     background-color: #FAFAFA;
+    /* prevent side scroll */
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 *,
@@ -65,11 +68,9 @@ html {
     padding: 0;
 }
 
-
-/* header / navigtion menu styles */
-
 .header {
-    padding: 5rem 0 20rem 0;
+    /* t-r-b-l */
+    padding: 5rem 8rem 10rem 8rem;
     list-style: none;
     border-bottom-left-radius: 10rem;
     /* svg as background img + linear gradient */
@@ -79,122 +80,131 @@ html {
     overflow: hidden;
 }
 
-.nav ul {
-    display: flex;
-    /* shift items to the start of navbar */
-    justify-content: flex-start;
-    font-size: 2rem;
-    /* Prevent wrapping of sign up button */
-    white-space: nowrap;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    border-bottom: 5px solid #0966C2;
-    text-decoration: none;
+
+/* Just couldn't get the Navbar logo working correctly with the spaces,
+this works but there is definitely a better way to do this.
+ */
+
+.logo_one {
+    display: none;
 }
 
-nav li:nth-child(4) {
+.logo {
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+.nav-menu {
+    white-space: nowrap;
+    list-style-type: none;
+    /* First three items left of screen */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+/* Submenu */
+
+
+/* Line on moblile menu between login / sign up / other items */
+
+.space {
+    display: none;
+}
+
+
+/* login / sign up left of screen */
+
+nav li:nth-child(6) {
     margin-left: auto;
 }
 
-li {
-    /* display: inline-block; */
-    transition: all 0.3s ease 0s;
+.main-item {
     font-family: 'Ubuntu';
     text-decoration: none;
+    cursor: pointer;
     /* Space between links */
     margin: 0 1.9rem;
     color: var(--white-text);
-    font-size: 1.8rem;
-    /* transition: all 0.3s ease 0s; */
+    font-size: 2rem;
+    transition: all 0.3s ease 0s;
 }
 
 
 /* Raise affect nav items when hovered over */
 
-
-/* li:hover {
+li:hover {
     transform: translateY(-0.1rem) scale(1.1);
-} */
+    transform: scale(1.03);
+    text-decoration: underline;
+    color: white;
+    text-decoration-thickness: 0.13rem;
+}
 
 a {
-    font-family: 'Ubuntu';
     text-decoration: none;
-    /* Space between links */
-    margin: 0 1.9rem;
-    color: var(--white-text);
-    font-size: 1.8rem;
-    transition: all 0.3s ease 0s;
+    cursor: pointer;
 }
 
-
-/* Underline effect on links */
-
-.fancy-link {
-    position: relative;
-}
-
-.fancy-link::after {
-    content: '';
-    position: absolute;
-    /* position underline on bottom of link */
-    left: 0;
-    bottom: 0;
-    width: 80%;
-    height: 0.15rem;
-    background-color: var(--white-text);
-    /* Animation */
-    transform: scaleX(0);
-    /* transition from left to right */
-    transition: transform 300ms ease-in;
-    /* underline end on right */
-    transform-origin: right;
-}
-
-.fancy-link:hover:after {
-    transform: scaleX(1);
-    /* underline start on left */
-    transform-origin: left;
+li>a {
+    color: var(--very-dark-black-blue);
 }
 
 
 /* Button styles */
 
-button {
-    padding: 0.7rem 1.7rem;
-    margin-left: -1rem;
+.btn {
+    width: 10rem;
+    height: 3.8rem;
     background-color: var(--white-text);
     border: none;
-    border-radius: 3rem;
+    border-radius: 2rem;
     cursor: pointer;
     transition: all 0.3s ease 0s;
-    color: #FC5F64;
-    font-size: 1.8rem;
+    color: #FC7D88;
+    font-size: 2rem;
     font-family: 'Ubuntu';
     align-items: center;
-    margin-top: -0.5rem;
 }
 
 
 /* on hover over button zoom */
 
 button:hover {
-    background-color: #FC5761;
+    background-color: #FC7D88;
     color: var(--white-text);
-    transform: translateY(-0.2rem) scale(1.1);
     /* colour text on transition */
     color: white;
 }
 
 
-/* Arrow  */
+/* Bottom buttons */
 
-.arrow {
-    transform: rotate(180deg);
+.flex-parent {
+    display: flex;
 }
 
-
-/* Dropdown menu for links */
+.flex-child {
+    flex: 1;
+    flex-direction: column;
+    white-space: nowrap;
+    /* t-r-b-l */
+    margin: 3rem 0 0 1.5rem;
+    /* set w & h to keep button same size regardless of content */
+    width: 12rem;
+    height: 4rem;
+    text-align: center;
+    background-color: var(--white-text);
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    color: #FC5F64;
+    font-size: 1.5rem;
+    font-family: 'Ubuntu';
+    align-items: center;
+}
 
 
 /* Hamburger styles */
@@ -214,12 +224,187 @@ button:hover {
 }
 
 
-/* Responsive */
+/* submenu */
 
-@media only screen and (max-width: 1050px) {
+.active .item {
+    display: block;
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    /* t-r-b-l */
+    /* margin: 1rem 0 0 9rem; */
+    margin-top: 1rem;
+    list-style: none;
+    color: var(--very-dark-black-blue);
+    background-color: var(--white-text);
+    font-size: 1.6rem;
+    width: 15rem;
+    /* t-r-b-l */
+    padding: 1.4rem 0 1.4rem 1.4rem;
+    /* spacing between submenu items */
+    line-height: 1.8;
+    border-radius: 0.2rem;
+    text-decoration: none;
+    font-family: 'Ubuntu';
+    text-decoration: none;
+    border-radius: 0.4rem;
+}
+
+.submenu-active .submenu {
+    display: block;
+}
+
+.has-submenu i {
+    font-size: 12px;
+}
+
+.toggle i {
+    /* order: 1; */
+    font-size: 3rem;
+    color: white;
+}
+
+
+/* Sub Header */
+
+.sub-header {
+    /* Centre header */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    gap: 1ch;
+    margin-top: 8rem;
+}
+
+.main-h {
+    font-family: 'Overpass';
+    font-weight: 300;
+    font-size: 5rem;
+    color: var(--white-text);
+    /* allign text center */
+    text-align: center;
+}
+
+.main-p {
+    font-family: 'Overpass';
+    color: var(--white-text);
+    font-weight: 200;
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    line-height: 1.6;
+    /* allign text center */
+    text-align: center;
+}
+
+
+/* First section */
+
+
+/* Grid  */
+
+.wrapper {
+    display: grid;
+    /* Two equal columns */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    position: relative;
+    width: 85%;
+    /* Centre content on page*/
+    top: 8rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+/* Designed for the future */
+
+.sub-h {
+    /* Centre header */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    gap: 1ch;
+    margin-top: 10rem;
+    margin-bottom: -1rem;
+    font-family: overpass;
+    font-size: 4rem;
+    color: var(--very-dark-gray-blue);
+}
+
+
+/* Column one */
+
+.col-one {
+    margin-top: 4.5rem;
+}
+
+h2 {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    font-family: overpass;
+    color: var(--very-dark-gray-blue);
+}
+
+.sub-p {
+    margin-bottom: 8rem;
+    font-size: 2rem;
+    font-family: overpass;
+    color: var(--very-dark-gray-blue);
+}
+
+
+/* Column two */
+
+.col-two {
+    margin-top: -16rem;
+    margin-left: 7.5rem;
+}
+
+.svg-img {
+    height: 85rem;
+    width: auto;
+}
+
+
+/* Infrastrucutre */
+
+.infra {
+    /* t-r-b-l */
+    padding: 15rem;
+    width: 100%;
+    margin-top: 10rem;
+    background-color: #393B55;
+    border-bottom-left-radius: 8rem;
+    border-top-right-radius: 8rem;
+}
+
+
+/* Breakpoints */
+
+@media only screen and (max-width: 50rem) {
+    nav {
+        display: flex;
+        justify-content: flex-end;
+    }
+    /* remove logo */
+    .logo {
+        display: none;
+    }
+    /* add flex logo */
+    .logo_one {
+        display: flex;
+        cursor: pointer;
+    }
     .nav-menu {
         position: fixed;
-        padding: 3rem;
+        padding: 2rem;
         right: -100%;
         flex-direction: column;
         background-color: #fff;
@@ -234,31 +419,46 @@ button:hover {
     .nav-menu.active {
         /* Centre collapsable menu */
         position: absolute;
-        top: 36%;
+        top: 10rem;
         left: 50%;
-        transform: translate(-50%, -50%)
-        /* top: 0; */
+        transform: translateX(-50%);
     }
-    .nav-item {
-        margin: 1.5rem 0;
-        text-align: center;
+    /* Reset login / sign up position */
+    nav li:nth-child(6) {
+        margin-left: 0;
     }
-    /* line */
+    /* Submenu */
+    .submenu {
+        position: relative;
+        background-color: #EFEFF1;
+        padding: 1.4rem 0 1.4rem 0;
+        width: 27rem;
+        /* t-r-b-l */
+        margin-top: 1.5rem;
+        line-height: 2.2;
+    }
+    /* Line seperating login / sign up */
     .space {
-        margin: 1rem 0;
+        display: block;
+        margin: 0.5rem 0;
         border: 0.1rem solid var(--grayish-blue);
         border-radius: 0.1rem;
         width: 100%;
         margin-left: 0;
     }
-    /* Dropdown menu */
-    a {
-        color: var(--gradient-desaturated-blue);
-        font-weight: 500;
-        font-size: 2rem;
+    .main-item {
+        color: var(--very-dark-black-blue);
     }
-    .fancy-link::after {
-        background-color: var(--very-dark-black-blue);
+    .nav-item {
+        margin: 0.5rem 0;
+    }
+    /* space between menu items */
+    .item {
+        margin-bottom: 2rem;
+    }
+    li:hover {
+        text-decoration: none;
+        color: inherit;
     }
     .hamburger {
         position: relative;

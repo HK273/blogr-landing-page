@@ -10,6 +10,7 @@ Prevent wrapping: https://presscustomizr.com/snippet/avoid-wrapping-menu-items/
 
 Animation on links: https://www.youtube.com/watch?v=ceNMP-aQkQ4
 Positioning: https://www.youtube.com/watch?v=UO8ed-JB4So
+underline links: https://a11y-101.com/development/underlined-links
 =================================================================================== */
 
 
@@ -68,61 +69,53 @@ html {
 /* header / navigtion menu styles */
 
 .header {
-    /* This padding is wrong! */
-    padding: 20rem;
-    width: 100%;
+    padding: 5rem 0 20rem 0;
     list-style: none;
     border-bottom-left-radius: 10rem;
     /* svg as background img + linear gradient */
     background: url(/images/bg-pattern-intro.svg) 24% 52%, linear-gradient(to right, var(--gradient-v-light-red), var(--gradient-light-red));
     /* set svg background size */
     background-size: 175rem;
-    margin-top: -16rem;
     overflow: hidden;
-}
-
-.logo {
-    cursor: pointer;
-    position: fixed;
-    left: 5rem;
-    top: 3.5rem;
-}
-
-.nav {
-    width: 100%;
-    margin-top: 0.5rem;
-    /* Bring li content closer to logo */
-    margin-left: -1rem;
 }
 
 .nav ul {
     display: flex;
-    /* justify-content: space-between; */
-    /* align-items: stretch; */
+    /* shift items to the start of navbar */
+    justify-content: flex-start;
+    font-size: 2rem;
     /* Prevent wrapping of sign up button */
     white-space: nowrap;
     list-style-type: none;
-    color: black;
+    padding: 0;
+    margin: 0;
+    border-bottom: 5px solid #0966C2;
+    text-decoration: none;
 }
 
-
-/* Spacing between login / signup */
-
-.space {
-    margin-right: auto;
+nav li:nth-child(4) {
+    margin-left: auto;
 }
 
 li {
-    display: inline-block;
+    /* display: inline-block; */
     transition: all 0.3s ease 0s;
+    font-family: 'Ubuntu';
+    text-decoration: none;
+    /* Space between links */
+    margin: 0 1.9rem;
+    color: var(--white-text);
+    font-size: 1.8rem;
+    /* transition: all 0.3s ease 0s; */
 }
 
 
 /* Raise affect nav items when hovered over */
 
-li:hover {
+
+/* li:hover {
     transform: translateY(-0.1rem) scale(1.1);
-}
+} */
 
 a {
     font-family: 'Ubuntu';

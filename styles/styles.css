@@ -345,7 +345,7 @@ button:hover {
     margin-top: 4.5rem;
 }
 
-h2 {
+.first-htwo {
     margin-bottom: 2rem;
     font-size: 3rem;
     font-family: overpass;
@@ -377,12 +377,40 @@ h2 {
 
 .infra {
     /* t-r-b-l */
-    padding: 15rem;
+    display: grid;
+    /* Two equal columns */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    /* padding: 15rem; */
     width: 100%;
+    height: 39rem;
     margin-top: 10rem;
     background-color: #393B55;
     border-bottom-left-radius: 8rem;
     border-top-right-radius: 8rem;
+}
+
+.second-htwo {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    font-family: overpass;
+    color: var(--white-text);
+}
+
+.sub-p-two {
+    margin-bottom: 8rem;
+    font-size: 2rem;
+    font-family: overpass;
+    color: var(--grayish-blue);
+}
+
+.col-three {
+    margin-top: -7rem;
+    margin-left: 4.5rem;
+}
+
+.col-four {
+    margin-top: 11rem;
+    width: 85%;
 }
 
 

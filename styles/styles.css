@@ -376,7 +376,6 @@ button:hover {
 /* Infrastrucutre */
 
 .infra {
-    /* t-r-b-l */
     display: grid;
     /* Two equal columns */
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -452,16 +451,47 @@ button:hover {
     border-top-right-radius: 8rem;
 }
 
-a {
+.footer-links>a {
     text-decoration: none;
+    font-size: 2rem;
+    font-family: overpass;
+    color: var(--white-text);
+    font-size: 1.6rem;
+    /* t-r-b-l */
+    margin: 1rem 0 1rem 0;
+}
+
+.footer-links>a:hover {
+    text-decoration: underline;
     color: white;
-    font-size: 5rem;
+    text-decoration-thickness: 0.13rem;
 }
 
 .footer-links {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
+    /* t-r-b-l */
+    margin: 7rem 0 0 5rem;
+}
+
+.footer-links>h2 {
+    color: white;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-family: overpass;
+    color: var(--white-text);
+}
+
+.logo_footer {
+    height: 5rem;
+    width: 12rem;
+}
+
+.logo_footer:hover {
+    cursor: pointer;
+    transform: translateY(-0.1rem) scale(1.1);
+    transform: scale(1.03);
 }
 
 

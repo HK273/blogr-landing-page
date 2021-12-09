@@ -11,6 +11,8 @@ Animation on links: https://www.youtube.com/watch?v=ceNMP-aQkQ4
 Positioning: https://www.youtube.com/watch?v=UO8ed-JB4So
 underline links: https://a11y-101.com/development/underlined-links
 
+More centreing: https://betterprogramming.pub/how-to-center-things-with-style-in-css-dc87b7542689
+
 */
     /* Import styles */
     /* Overpass */
@@ -383,6 +385,10 @@ this works but there is definitely a better way to do this.
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     
+    .svg-img-mob-two {
+        display: none;
+    }
+    
     .col-five {
         margin-top: -2rem;
         margin-left: -24.9rem;
@@ -518,8 +524,53 @@ this works but there is definitely a better way to do this.
         }
         .laptop {
             display: flex;
-            justify-content: center;
             flex-direction: column;
+        }
+        .col-five {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 100%;
+            gap: 1ch;
+            margin-top: -7rem;
+            margin-bottom: 2rem;
+            margin-left: 0;
+        }
+        .svg-img-three {
+            display: none;
+        }
+        .svg-img-mob-two {
+            display: flex;
+            width: 100%;
+        }
+        /* col-five */
+        .col-six {
+            text-align: center;
+            margin: auto;
+        }
+    }
+    /* Top Heading / Footer at smaller breakpoint */
+    
+    @media only screen and (max-width: 42rem) {
+        .sub-h {
+            font-size: 3.5rem;
+        }
+        .footer .container {
+            display: grid;
+            /* colapse grid to one column */
+            grid-template-columns: 1fr;
+            text-align: center;
+            /* fill container with content */
+            height: 100%;
+        }
+        .footer-links {
+            margin: auto;
+            margin-bottom: 5rem;
+        }
+        .logo_footer {
+            /* t-r-b-l */
+            margin: 8rem 0 3rem 0;
         }
     }
     /* Navigation Menu */

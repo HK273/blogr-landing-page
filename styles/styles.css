@@ -12,7 +12,7 @@ Positioning: https://www.youtube.com/watch?v=UO8ed-JB4So
 underline links: https://a11y-101.com/development/underlined-links
 
 More centreing: https://betterprogramming.pub/how-to-center-things-with-style-in-css-dc87b7542689
-
+Safari doesn't suppor rem's in media query so need to switch to em's -> https://stackoverflow.com/questions/20065149/media-queries-and-rems-not-working-in-safari-5-1/20065150
 */
 
 
@@ -189,7 +189,6 @@ button:hover {
 
 .flex-child {
     flex: 1;
-    flex-direction: column;
     white-space: nowrap;
     /* t-r-b-l */
     margin: 3rem 0 0 1.5rem;
@@ -507,7 +506,7 @@ button:hover {
 
 /* Breakpoints */
 
-@media (max-width: 69rem) {
+@media only screen and (max-width: 69rem) {
     .wrapper {
         display: flex;
         flex-direction: column;
@@ -602,7 +601,7 @@ button:hover {
 
 /* Nav Header / Top Heading / Footer at smaller breakpoint */
 
-@media only screen and (max-width: 42rem) {
+@media only screen and (max-width: 42em) {
     .sub-h {
         font-size: 3.5rem;
     }
@@ -627,7 +626,7 @@ button:hover {
 
 /* Images at mobile device size */
 
-@media only screen and (max-width: 40rem) {
+@media only screen and (max-width: 40em) {
     .svg-img-mob-two {
         display: flex;
         height: 100%;
@@ -643,7 +642,7 @@ button:hover {
 
 /* Navigation Menu */
 
-@media only screen and (max-width: 50rem) {
+@media only screen and (max-width: 50em) {
     nav {
         display: flex;
         justify-content: flex-end;

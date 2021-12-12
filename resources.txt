@@ -1,0 +1,18 @@
+
+Resources:
+
+https://css-tricks.com/scale-svg/
+https://www.youtube.com/watch?v=ciMsVVyv3Og
+https://coryrylan.com/blog/css-gap-space-with-flexbox - Spacing flex
+https://stackoverflow.com/questions/43475815/how-do-i-create-a-space-between-my-nav-bar - Spacing between nav items
+Centre Things: https://www.w3.org/Style/Examples/007/center.en.html#vertical
+Prevent wrapping: https://presscustomizr.com/snippet/avoid-wrapping-menu-items/
+
+Animation on links: https://www.youtube.com/watch?v=ceNMP-aQkQ4
+Positioning: https://www.youtube.com/watch?v=UO8ed-JB4So
+underline links: https://a11y-101.com/development/underlined-links
+Responsive Menu: https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci 
+Responsive Nav Bar: https://webdesign.tutsplus.com/tutorials/how-to-build-a-responsive-navigation-bar-with-flexbox--cms-33535
+
+More centreing: https://betterprogramming.pub/how-to-center-things-with-style-in-css-dc87b7542689
+Safari doesn't suppor rem's in media query so need to switch to em's -> https://stackoverflow.com/questions/20065149/media-queries-and-rems-not-working-in-safari-5-1/20065150

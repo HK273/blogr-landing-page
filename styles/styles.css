@@ -52,6 +52,13 @@ html {
     padding: 0;
 }
 
+
+/* Safari overlooks overflow when rendering, so add to body tag */
+
+body {
+    overflow-x: hidden;
+}
+
 .header {
     /* t-r-b-l */
     padding: 5rem 8rem 10rem 8rem;
@@ -488,7 +495,7 @@ button:hover {
 
 /* Breakpoints */
 
-@media only screen and (max-width: 69rem) {
+@media only screen and (max-width: 70em) {
     .wrapper {
         display: flex;
         flex-direction: column;
@@ -711,5 +718,39 @@ button:hover {
     }
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-0.9rem) rotate(-45deg);
+    }
+}
+
+
+/* iPhone 8 images and top line header */
+
+@media only screen and (max-width: 375px) {
+    .sub-h {
+        font-size: 3.1rem;
+    }
+    .svg-img-mob {
+        width: 40rem;
+    }
+    .svg-img-mob-two {
+        width: 50rem;
+    }
+}
+
+
+/* Nav menu at small mobile device  */
+
+@media only screen and (max-width: 320px) {
+    .nav-menu {
+        width: 90%;
+    }
+    .svg-img-mob {
+        width: 35rem;
+    }
+    .svg-img-mob-two {
+        width: 45rem;
+    }
+    .sub-h {
+        font-size: 2.8rem;
+        white-space: nowrap;
     }
 }

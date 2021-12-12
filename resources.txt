@@ -7,6 +7,7 @@ https://coryrylan.com/blog/css-gap-space-with-flexbox - Spacing flex
 https://stackoverflow.com/questions/43475815/how-do-i-create-a-space-between-my-nav-bar - Spacing between nav items
 Centre Things: https://www.w3.org/Style/Examples/007/center.en.html#vertical
 Prevent wrapping: https://presscustomizr.com/snippet/avoid-wrapping-menu-items/
+Overflow hidden x on safari: https://stackoverflow.com/questions/32666663/overflow-x-hidden-is-not-working-in-safari
 
 Animation on links: https://www.youtube.com/watch?v=ceNMP-aQkQ4
 Positioning: https://www.youtube.com/watch?v=UO8ed-JB4So

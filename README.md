@@ -91,6 +91,7 @@ nav li:nth-child(6) {
 - [On click function](https://newbedev.com/changing-font-awesome-icon-onclick-function)
 - [Event listener to all elements](https://javascript.tutorialink.com/how-to-add-event-listener-to-all-elements/)
 - [Event listener multiple elements](https://flaviocopes.com/how-to-add-event-listener-multiple-elements-javascript/)
+- [Git push with token](https://techglimpse.com/git-push-github-token-based-passwordless/)
 
 ## Author
 

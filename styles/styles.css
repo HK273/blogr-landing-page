@@ -65,7 +65,7 @@ body {
     list-style: none;
     border-bottom-left-radius: 10rem;
     /* svg as background img + linear gradient */
-    background: url(../images/bg-pattern-intro.svg) 24% 52%, linear-gradient(to right, var(--gradient-v-light-red), var(--gradient-light-red));
+    background: url(./images/bg-pattern-intro.svg) 24% 52%, linear-gradient(to right, var(--gradient-v-light-red), var(--gradient-light-red));
     /* set svg background size */
     background-size: 175rem;
     overflow: hidden;
@@ -375,7 +375,7 @@ Remember for next time
 .infra {
     display: grid;
     /* wasn't sure how to flip this to match the design */
-    background: url(./images/bg-pattern-circles.svg);
+    background: url(../images/bg-pattern-circles.svg);
     background-repeat: no-repeat;
     /* Two equal columns */
     grid-template-columns: repeat(2, minmax(0, 1fr));

@@ -23,8 +23,8 @@ Responsive one page site
 
 ### Links
 
-- [Solution URL](https://www.frontendmentor.io/solutions/four-card-section-grid-flexbox-responsive-3LySr1LRe)
-- [Live Site URL](https://hk273.github.io/four-card-section/)
+- [Solution URL]()
+- [Live Site URL]()
 
 ### Built with
 

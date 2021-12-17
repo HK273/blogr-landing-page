@@ -367,7 +367,10 @@ button:hover {
 }
 
 
-/* Infrastrucutre */
+/* Infrastrucutre
+These additional grid wrappers are unnecessary!
+Remember for next time
+*/
 
 .infra {
     display: grid;

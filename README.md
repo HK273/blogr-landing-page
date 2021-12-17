@@ -87,6 +87,10 @@ nav li:nth-child(6) {
 - [Responsive Menu](https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci)
 - [Responsive Navbar](https://webdesign.tutsplus.com/tutorials/how-to-build-a-responsive-navigation-bar-with-flexbox--cms-33535)
 - [REM VS EM Media queries in Safari](https://stackoverflow.com/questions/20065149/media-queries-and-rems-not-working-in-safari-5-1/20065150)
+- [Event Listener, click in specific area](https://www.codegrepper.com/code-examples/javascript/javascript+detect+click+in+a+specific+area)
+- [On click function](https://newbedev.com/changing-font-awesome-icon-onclick-function)
+- [Event listener to all elements](https://javascript.tutorialink.com/how-to-add-event-listener-to-all-elements/)
+- [Event listener multiple elements](https://flaviocopes.com/how-to-add-event-listener-multiple-elements-javascript/)
 
 ## Author
 

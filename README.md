@@ -98,4 +98,4 @@ nav li:nth-child(6) {
 
 ## Acknowledgments
 
-- Thanks to [Orkhai Dickson](https://github.com/orkhai)
+- Thanks [Orkhai Dickson](https://github.com/orkhai)

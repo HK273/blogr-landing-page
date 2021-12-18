@@ -23,7 +23,7 @@ Responsive one page site
 
 ### Links
 
-- [Solution URL]()
+- [Solution URL](https://www.frontendmentor.io/solutions/blogr-landing-page-vzlfHyRAK)
 - [Live Site URL](https://hk273.github.io/blogr-landing-page/)
 
 ### Built with

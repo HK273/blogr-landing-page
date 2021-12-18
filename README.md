@@ -24,7 +24,7 @@ Responsive one page site
 ### Links
 
 - [Solution URL]()
-- [Live Site URL]()
+- [Live Site URL](https://hk273.github.io/blogr-landing-page/)
 
 ### Built with
 

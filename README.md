@@ -77,7 +77,7 @@ nav li:nth-child(6) {
 - [SVG's](https://css-tricks.com/scale-svg/)
 - [Flexbox Gap Space](https://coryrylan.com/blog/css-gap-space-with-flexbox)
 - [Spacing Nav Items](https://stackoverflow.com/questions/43475815/how-do-i-create-a-space-between-my-nav-bar)
-- [Centre things](https://stackoverflow.com/questions/7596647/ignore-br-with-css)
+- [br tags](https://stackoverflow.com/questions/7596647/ignore-br-with-css)
 - [Centre more things](https://betterprogramming.pub/how-to-center-things-with-style-in-css-dc87b7542689)
 - [Prevent Wrapping](https://presscustomizr.com/snippet/avoid-wrapping-menu-items/)
 - [Overflow x on safari](https://stackoverflow.com/questions/32666663/overflow-x-hidden-is-not-working-in-safari)
